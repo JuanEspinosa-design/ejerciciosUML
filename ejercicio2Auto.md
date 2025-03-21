@@ -29,8 +29,9 @@ classDiagram
         -int id
         -string nombre
         +Cliente(int i, string n)
-        +int getId() const
-        +string getNombre() const
+        +~Cliente()
+        +int getId() 
+        +string getNombre()
     }
 
     AgenciaRenta o-- Auto 
