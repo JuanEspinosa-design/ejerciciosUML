@@ -34,6 +34,6 @@ classDiagram
         +string getNombre()
     }
 
-    Hotel *-- Habitacion : Composición
-    Hotel o-- Cliente : Agregación
+    Hotel *-- Habitacion
+    Hotel o-- Cliente
 ```
