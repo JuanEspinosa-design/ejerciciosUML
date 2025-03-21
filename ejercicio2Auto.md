@@ -34,6 +34,15 @@ classDiagram
         +string getNombre()
     }
 
+    class Contrato {
+        -Cliente* cliente
+        -Auto* autoRentado
+        -int dias
+        +Contrato(Cliente* c, Auto* a, int d)
+        +~Contrato()
+    }
     AgenciaRenta o-- Auto 
     AgenciaRenta o-- Cliente
+    Contrato --> Cliente 
+    Contrato --> Auto 
 ```
