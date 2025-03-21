@@ -1,27 +1,28 @@
 ```mermaid
 classDiagram
 
-    class Hotel {
+    class AgenciaRenta {
         -string nombre
-        -vector<Habitacion*> habitaciones
+        -vector<Auto*> autos
         -vector<Cliente*> clientes
-        +Hotel(string n)
-        +void agregarHabitacion(Habitacion* hab)
-        +void registrarCliente(Cliente* cliente)
-        +void mostrarHabitaciones() const
-        +void mostrarClientes() const
+        +AgenciaRenta(string n)
+        +~AgenciaRenta()
+        +void agregarAuto(Auto* autoPtr)
+        +void agregarCliente(Cliente* clientePtr)
+        +void mostrarInfo()
     }
 
-    class Habitacion {
-        -int numero
-        -string tipo
-        -bool ocupada
-        +Habitacion(int num, string t)
-        +int getNumero() const
-        +string getTipo() const
-        +bool estaOcupada() const
-        +void ocupar()
-        +void desocupar()
+    class Auto {
+        -string placa
+        -string modelo
+        -bool disponible
+        +Auto(string p, string m)
+        +~Auto()
+        +string getPlaca() 
+        +string getModelo()
+        +bool estaDisponible() 
+        +void rentar()
+        +void devolver()
     }
 
     class Cliente {
@@ -32,6 +33,6 @@ classDiagram
         +string getNombre() const
     }
 
-    Hotel o-- Habitacion 
-    Hotel o-- Cliente
+    AgenciaRenta o-- Auto 
+    AgenciaRenta o-- Cliente
 ```
