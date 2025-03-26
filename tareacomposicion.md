@@ -1,3 +1,4 @@
+```mermaid
 classDiagram
     class Habitacion {
         -int numero
@@ -31,3 +32,4 @@ classDiagram
     }
     Hotel *-- Habitacion
     Hotel *-- Cliente
+```
